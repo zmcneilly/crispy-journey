@@ -1,0 +1,20 @@
+graph {
+    // Nodes
+    lambda_service [label="AWS Lambda", color="orange", style="filled"]
+    s3_service     [label="AWS Storage", color="orange", style="filled"]
+    api_service    [label="AWS API Gateway", color="orange", style="filled"]
+    github_service [label="GitHub"]
+    build_service  [label="Build service???", color="yellow", style="filled"]
+    cust           [label="Customer"]
+    proxy_service  [label="Proxy service???", color="yellow", style="filled"]
+
+    // Relationships
+    cust -- proxy_service           [label="API Request"]
+    proxy_service -- api_service    [label="API Request"]
+    api_service -- lambda_service   [label="API Request"]
+    lambda_service -- s3_service    [label="Request dictionary"]
+
+    cust -- github_service          [label="Code Commit"]
+    github_service -- build_service [label="Code Commit"]
+    build_service -- lambda_service [label="ZIP Artifact"]
+}
