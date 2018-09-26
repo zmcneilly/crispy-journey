@@ -17,3 +17,8 @@ will allow the end user to store, retrieve, or update their passwords for a site
 - Github
 - Build Service
 - Proxy Service
+
+### Project Structure
+
+docs/ - Documentation and design docs
+com/zmcneilly/password/ - Code to be run in Lambda

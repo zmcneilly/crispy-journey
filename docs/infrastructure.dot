@@ -1,7 +1,7 @@
 graph {
     // Nodes
     lambda_service [label="AWS Lambda", color="orange", style="filled"]
-    s3_service     [label="AWS Storage", color="orange", style="filled"]
+    s3_service     [label="Deprecated(AWS Storage)", color="black", style="filled"]
     api_service    [label="AWS API Gateway", color="orange", style="filled"]
     github_service [label="GitHub"]
     build_service  [label="Build service???", color="yellow", style="filled"]
