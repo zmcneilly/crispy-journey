@@ -1,5 +1,7 @@
 # ZKM Additions
 venv/
+.aws-api.id
+.aws-api.key
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

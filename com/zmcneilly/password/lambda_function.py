@@ -1,20 +1,22 @@
 import random
 import json
+import os
 
 
 def load_words() -> list:
     """
-    Function will load the word dictionary file and return a set of all words.
+    Load the word dictionary file and return a set of all words.
     :rtype: list[str]
     """
-    with open('./words_dictionary.json') as word_file:
+    dir = os.path.dirname(os.path.realpath(__file__))
+    with open('{}/words_dictionary.json'.format(dir)) as word_file:
         valid_words = list(json.load(word_file).keys())
     return valid_words
 
 
 def random_symbol(num: int = 1, seed=None) -> list:
     """
-    Function will return a list of random symbols from the following set:
+    Returns a list of random symbols from the following set:
 
     ['!', '@', '#', '$', '%', '^', '&, '*' ,'(', ')', '-', '_', '=', '+', '`', '~]
 
@@ -35,7 +37,7 @@ def random_symbol(num: int = 1, seed=None) -> list:
 
 def random_word(num: int = 1, seed=None) -> list:
     """
-    Function will return a list of random words.
+    Returns a list of random words.
 
     :param num: Number of words to return
     :type num: int
